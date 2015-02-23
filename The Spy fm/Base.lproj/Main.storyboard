@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jdt-VH-H9i">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Now Playing-->
+        <scene sceneID="qmn-cc-85b">
+            <objects>
+                <viewController id="CBU-ll-naY" customClass="AudioController" customModule="The_Spy_fm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9c6-kX-VDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQe-Qx-lQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vcU-A2-2xS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPL-vA-0D8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.38039215686274508" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="SEp-h1-aPi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SEp-h1-aPi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SEp-h1-aPi"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="jLg-jl-JaG" kind="embed" id="cQt-fa-ji5"/>
+                                </connections>
+                            </containerView>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB4-Wk-n5j">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="1o9-Tg-BZS"/>
+                                    <constraint firstAttribute="height" constant="56" id="oFA-Ui-Mht"/>
+                                </constraints>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1o9-Tg-BZS"/>
+                                        <exclude reference="oFA-Ui-Mht"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1o9-Tg-BZS"/>
+                                        <include reference="oFA-Ui-Mht"/>
+                                    </mask>
+                                </variation>
+                            </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thespypurple.png" translatesAutoresizingMaskIntoConstraints="NO" id="P4k-K8-Q4f">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.18431372549019609" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="P4k-K8-Q4f" secondAttribute="centerX" constant="4.5" id="1A2-aP-iZT"/>
+                            <constraint firstItem="sQe-Qx-lQc" firstAttribute="top" secondItem="ZB4-Wk-n5j" secondAttribute="bottom" constant="66" id="AFn-7i-pS5"/>
+                            <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="110" id="Obe-Q0-gep"/>
+                            <constraint firstItem="wPL-vA-0D8" firstAttribute="leading" secondItem="vcU-A2-2xS" secondAttribute="leadingMargin" constant="32" id="TmD-zX-9qy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wPL-vA-0D8" secondAttribute="trailing" constant="32" id="V1J-BI-WQk"/>
+                            <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="39" id="aqC-FG-Vkz"/>
+                            <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="110" id="eXb-St-9dT"/>
+                            <constraint firstAttribute="centerX" secondItem="ZB4-Wk-n5j" secondAttribute="centerX" constant="5" id="gWg-FU-Aqm"/>
+                            <constraint firstAttribute="centerX" secondItem="wPL-vA-0D8" secondAttribute="centerX" id="pkU-dA-9fd"/>
+                            <constraint firstItem="P4k-K8-Q4f" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="17" id="x1p-nk-05Y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wPL-vA-0D8"/>
+                                <exclude reference="ZB4-Wk-n5j"/>
+                                <exclude reference="P4k-K8-Q4f"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AFn-7i-pS5"/>
+                                <exclude reference="1A2-aP-iZT"/>
+                                <exclude reference="x1p-nk-05Y"/>
+                                <exclude reference="gWg-FU-Aqm"/>
+                                <exclude reference="Obe-Q0-gep"/>
+                                <exclude reference="TmD-zX-9qy"/>
+                                <exclude reference="V1J-BI-WQk"/>
+                                <exclude reference="aqC-FG-Vkz"/>
+                                <exclude reference="eXb-St-9dT"/>
+                                <exclude reference="pkU-dA-9fd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wPL-vA-0D8"/>
+                                <include reference="ZB4-Wk-n5j"/>
+                                <include reference="P4k-K8-Q4f"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AFn-7i-pS5"/>
+                                <include reference="1A2-aP-iZT"/>
+                                <include reference="x1p-nk-05Y"/>
+                                <include reference="gWg-FU-Aqm"/>
+                                <exclude reference="Obe-Q0-gep"/>
+                                <include reference="TmD-zX-9qy"/>
+                                <include reference="V1J-BI-WQk"/>
+                                <exclude reference="aqC-FG-Vkz"/>
+                                <include reference="eXb-St-9dT"/>
+                                <include reference="pkU-dA-9fd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="play.png" id="Jnd-96-m7z"/>
+                    <connections>
+                        <outlet property="player" destination="ZB4-Wk-n5j" id="mO1-Jp-wNI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iib-jP-E1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285.5" y="459"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uCt-Lg-m0K">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jdt-VH-H9i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Qcm-9b-qQf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CBU-ll-naY" kind="relationship" relationship="viewControllers" id="AHD-lu-2Lw"/>
+                        <segue destination="Aez-tN-jTc" kind="relationship" relationship="viewControllers" id="UXz-5i-z4i"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2J-Nf-jnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.5" y="459"/>
+        </scene>
+        <!--Now Playing View Controller-->
+        <scene sceneID="Hnp-Lm-V1s">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jLg-jl-JaG" customClass="NowPlayingViewController" customModule="The_Spy_fm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HdZ-W2-B0H"/>
+                        <viewControllerLayoutGuide type="bottom" id="vxt-F9-dir"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3xA-6h-dha">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTg-sk-EaB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PaS-0i-CU9"/>
+                                    <constraint firstAttribute="width" constant="96" id="Va5-nf-ICH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PaS-0i-CU9"/>
+                                        <exclude reference="Va5-nf-ICH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PaS-0i-CU9"/>
+                                        <include reference="Va5-nf-ICH"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fe-me-ZIQ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grF-pn-laU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Mwd-M1-usY">
+                                        <variation key="widthClass=compact" constant="27"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Mwd-M1-usY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Mwd-M1-usY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZz-c0-lhg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.38039215686274508" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aTg-sk-EaB" firstAttribute="top" secondItem="HdZ-W2-B0H" secondAttribute="bottom" constant="8" id="1d1-h1-WDZ"/>
+                            <constraint firstItem="1fe-me-ZIQ" firstAttribute="top" secondItem="aTg-sk-EaB" secondAttribute="bottom" constant="23" id="4NV-ou-V44"/>
+                            <constraint firstItem="grF-pn-laU" firstAttribute="top" secondItem="HdZ-W2-B0H" secondAttribute="bottom" constant="8" id="IG8-cf-M92">
+                                <variation key="widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="kZz-c0-lhg" firstAttribute="leading" secondItem="grF-pn-laU" secondAttribute="leading" id="JBQ-w2-y5l"/>
+                            <constraint firstItem="kZz-c0-lhg" firstAttribute="bottom" secondItem="vxt-F9-dir" secondAttribute="top" id="NoK-aO-q9d"/>
+                            <constraint firstItem="grF-pn-laU" firstAttribute="top" secondItem="HdZ-W2-B0H" secondAttribute="bottom" constant="5" id="ROT-w0-Dbl"/>
+                            <constraint firstItem="1fe-me-ZIQ" firstAttribute="leading" secondItem="3xA-6h-dha" secondAttribute="leadingMargin" id="Ybv-lO-Y8I"/>
+                            <constraint firstItem="kZz-c0-lhg" firstAttribute="top" secondItem="grF-pn-laU" secondAttribute="bottom" constant="8" symbolic="YES" id="b1g-bx-Pmn"/>
+                            <constraint firstItem="aTg-sk-EaB" firstAttribute="leading" secondItem="3xA-6h-dha" secondAttribute="leadingMargin" id="d21-Wh-HnF"/>
+                            <constraint firstItem="kZz-c0-lhg" firstAttribute="trailing" secondItem="3xA-6h-dha" secondAttribute="trailingMargin" id="jcR-FV-4Sc"/>
+                            <constraint firstItem="kZz-c0-lhg" firstAttribute="leading" secondItem="1fe-me-ZIQ" secondAttribute="trailing" constant="88" id="mN0-2g-yqE"/>
+                            <constraint firstItem="aTg-sk-EaB" firstAttribute="leading" secondItem="3xA-6h-dha" secondAttribute="leadingMargin" id="nmt-XD-XJL"/>
+                            <constraint firstItem="grF-pn-laU" firstAttribute="leading" secondItem="aTg-sk-EaB" secondAttribute="trailing" constant="21" id="y6L-YC-e1h">
+                                <variation key="widthClass=compact" constant="13"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="grF-pn-laU" secondAttribute="trailing" constant="8" id="zER-p5-sRw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aTg-sk-EaB"/>
+                                <exclude reference="1fe-me-ZIQ"/>
+                                <exclude reference="grF-pn-laU"/>
+                                <exclude reference="kZz-c0-lhg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4NV-ou-V44"/>
+                                <exclude reference="Ybv-lO-Y8I"/>
+                                <exclude reference="1d1-h1-WDZ"/>
+                                <exclude reference="d21-Wh-HnF"/>
+                                <exclude reference="nmt-XD-XJL"/>
+                                <exclude reference="IG8-cf-M92"/>
+                                <exclude reference="ROT-w0-Dbl"/>
+                                <exclude reference="y6L-YC-e1h"/>
+                                <exclude reference="zER-p5-sRw"/>
+                                <exclude reference="JBQ-w2-y5l"/>
+                                <exclude reference="NoK-aO-q9d"/>
+                                <exclude reference="b1g-bx-Pmn"/>
+                                <exclude reference="jcR-FV-4Sc"/>
+                                <exclude reference="mN0-2g-yqE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aTg-sk-EaB"/>
+                                <include reference="1fe-me-ZIQ"/>
+                                <include reference="grF-pn-laU"/>
+                                <include reference="kZz-c0-lhg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4NV-ou-V44"/>
+                                <include reference="Ybv-lO-Y8I"/>
+                                <include reference="1d1-h1-WDZ"/>
+                                <include reference="d21-Wh-HnF"/>
+                                <include reference="nmt-XD-XJL"/>
+                                <include reference="IG8-cf-M92"/>
+                                <exclude reference="ROT-w0-Dbl"/>
+                                <include reference="y6L-YC-e1h"/>
+                                <include reference="zER-p5-sRw"/>
+                                <include reference="JBQ-w2-y5l"/>
+                                <include reference="NoK-aO-q9d"/>
+                                <include reference="b1g-bx-Pmn"/>
+                                <include reference="jcR-FV-4Sc"/>
+                                <include reference="mN0-2g-yqE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="artist" destination="kZz-c0-lhg" id="em1-RH-jWG"/>
+                        <outlet property="track" destination="grF-pn-laU" id="ShJ-WJ-aS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80n-I9-0BX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981.5" y="110.5"/>
+        </scene>
+        <!--About the Spy-->
+        <scene sceneID="4xk-Ez-P9T">
+            <objects>
+                <viewController id="Aez-tN-jTc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="seh-7W-xsO"/>
+                        <viewControllerLayoutGuide type="bottom" id="j4c-ca-lEa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sir-Qd-um8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-oR-FkN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">About The Spy
+
+The SPY is and has been an Oklahoma ICON since the 1970</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="′">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="LucidaGrande-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">s. Loosely defined as Modern Rock, it draws many labels such as “College”, “Indie”, and “Alternative” but is so much more. With an emphasis on specialty shows, The SPY widens its audience by attracting audiophiles who are curious about discovering obscure gems in classic alternative, punk, post-punk, new wave, rockabilly, blues, country, garage, dance, goth, reggae, dub, ska, roots, and the literal lifeblood of The SPY… the LOCAL ARTISTS! Plus other musical styles that defy categorization.
+
+The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our mission is simple: To offer a unique, branded formula of music, original shows, ideas, community, &amp; EDUCATION to HELP further the LOCAL CULTURE in a format that appeals to listeners turned off by the current stagnant radio spectrum. Also, The SPY introduces our LOYAL LISTENERSHIP to the HIP local businesses in the metro by offering them an avenue of information on these businesses which is sorely UNDERREPRESENTED on the Oklahoma RADIO dial. Oklahoma City’s thriving music culture is also ready for a voice to help nuture the scene, and The SPY is going to give them that voice.</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="DINAlternate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="gMx-oR-FkN" secondAttribute="centerY" constant="6.5" id="8ap-M7-GRI">
+                                <variation key="widthClass=compact" constant="14.5"/>
+                            </constraint>
+                            <constraint firstItem="gMx-oR-FkN" firstAttribute="leading" secondItem="Sir-Qd-um8" secondAttribute="leading" id="erb-ab-ziW">
+                                <variation key="widthClass=compact" constant="-2"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="gMx-oR-FkN" secondAttribute="centerX" constant="-9" id="lTo-kL-lUZ">
+                                <variation key="widthClass=compact" constant="-0.5"/>
+                            </constraint>
+                            <constraint firstItem="gMx-oR-FkN" firstAttribute="top" secondItem="seh-7W-xsO" secondAttribute="bottom" id="lWa-TB-VgQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gMx-oR-FkN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8ap-M7-GRI"/>
+                                <exclude reference="erb-ab-ziW"/>
+                                <exclude reference="lTo-kL-lUZ"/>
+                                <exclude reference="lWa-TB-VgQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gMx-oR-FkN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8ap-M7-GRI"/>
+                                <include reference="erb-ab-ziW"/>
+                                <include reference="lTo-kL-lUZ"/>
+                                <include reference="lWa-TB-VgQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About the Spy" image="about.png" id="SLF-r5-Q3p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60H-Ce-9Mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098.5" y="547"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="about.png" width="20" height="20"/>
+        <image name="play.png" width="15" height="15"/>
+        <image name="thespypurple.png" width="161" height="67"/>
+    </resources>
+</document>
