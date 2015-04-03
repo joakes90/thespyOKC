@@ -12,6 +12,8 @@
 		D00AC9801A34136E005FB7E0 /* thespygreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC97F1A34136E005FB7E0 /* thespygreen.png */; };
 		D00AC98A1A34335D005FB7E0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC9891A34335D005FB7E0 /* play.png */; };
 		D00AC98E1A3433BD005FB7E0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC98D1A3433BD005FB7E0 /* about.png */; };
+		D03501931AC94FB100E6BD86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03501921AC94FB100E6BD86 /* AVFoundation.framework */; };
+		D04AA0761ACF3F9500BC39B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AA0751ACF3F9500BC39B7 /* MediaPlayer.framework */; };
 		D06AEDC01A3AE4C600E3CD9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06AEDBF1A3AE4C600E3CD9A /* Foundation.framework */; };
 		D06AEDC21A3AE4C600E3CD9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06AEDC11A3AE4C600E3CD9A /* UIKit.framework */; };
 		D0B5E9D31A2E4F96002EF95F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5E9D21A2E4F96002EF95F /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		D00AC97F1A34136E005FB7E0 /* thespygreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thespygreen.png; sourceTree = "<group>"; };
 		D00AC9891A34335D005FB7E0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		D00AC98D1A3433BD005FB7E0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		D03501921AC94FB100E6BD86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D04AA0751ACF3F9500BC39B7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D06AEDBD1A3AE4C600E3CD9A /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06AEDBF1A3AE4C600E3CD9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D06AEDC11A3AE4C600E3CD9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -67,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04AA0761ACF3F9500BC39B7 /* MediaPlayer.framework in Frameworks */,
+				D03501931AC94FB100E6BD86 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,8 @@
 		D06AEDBE1A3AE4C600E3CD9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D04AA0751ACF3F9500BC39B7 /* MediaPlayer.framework */,
+				D03501921AC94FB100E6BD86 /* AVFoundation.framework */,
 				D06AEDBF1A3AE4C600E3CD9A /* Foundation.framework */,
 				D06AEDC11A3AE4C600E3CD9A /* UIKit.framework */,
 			);
@@ -232,9 +240,16 @@
 					};
 					D0B5E9CC1A2E4F96002EF95F = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = C2NSPAKWYK;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D0B5E9E11A2E4F96002EF95F = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = C2NSPAKWYK;
 						TestTargetID = D0B5E9CC1A2E4F96002EF95F;
 					};
 				};
@@ -507,7 +522,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "The Spy fm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,7 +534,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "The Spy fm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,6 +546,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -540,6 +559,7 @@
 				INFOPLIST_FILE = "The Spy fmTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Spy fm.app/The Spy fm";
 			};
 			name = Debug;
@@ -548,6 +568,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -555,6 +577,7 @@
 				INFOPLIST_FILE = "The Spy fmTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The Spy fm.app/The Spy fm";
 			};
 			name = Release;
@@ -569,6 +592,7 @@
 				D06AEDDA1A3AE4C600E3CD9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0B5E9C81A2E4F96002EF95F /* Build configuration list for PBXProject "The Spy fm" */ = {
 			isa = XCConfigurationList;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jdt-VH-H9i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jdt-VH-H9i">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -65,16 +65,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.18431372549019609" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="P4k-K8-Q4f" secondAttribute="centerX" constant="4.5" id="1A2-aP-iZT"/>
+                            <constraint firstAttribute="centerX" secondItem="P4k-K8-Q4f" secondAttribute="centerX" constant="4.5" id="1A2-aP-iZT">
+                                <variation key="widthClass=compact" constant="-0.5"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="ZB4-Wk-n5j" secondAttribute="centerX" id="1b0-SL-a9j"/>
+                            <constraint firstItem="P4k-K8-Q4f" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="8" id="3fI-A0-GWm">
+                                <variation key="widthClass=compact" constant="36"/>
+                            </constraint>
                             <constraint firstItem="sQe-Qx-lQc" firstAttribute="top" secondItem="ZB4-Wk-n5j" secondAttribute="bottom" constant="66" id="AFn-7i-pS5"/>
                             <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="110" id="Obe-Q0-gep"/>
+                            <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="P4k-K8-Q4f" secondAttribute="bottom" constant="13" id="PGW-cX-Oka"/>
                             <constraint firstItem="wPL-vA-0D8" firstAttribute="leading" secondItem="vcU-A2-2xS" secondAttribute="leadingMargin" constant="32" id="TmD-zX-9qy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wPL-vA-0D8" secondAttribute="trailing" constant="32" id="V1J-BI-WQk"/>
                             <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="39" id="aqC-FG-Vkz"/>
-                            <constraint firstItem="wPL-vA-0D8" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="110" id="eXb-St-9dT"/>
-                            <constraint firstAttribute="centerX" secondItem="ZB4-Wk-n5j" secondAttribute="centerX" constant="5" id="gWg-FU-Aqm"/>
-                            <constraint firstAttribute="centerX" secondItem="wPL-vA-0D8" secondAttribute="centerX" id="pkU-dA-9fd"/>
-                            <constraint firstItem="P4k-K8-Q4f" firstAttribute="top" secondItem="9c6-kX-VDd" secondAttribute="bottom" constant="17" id="x1p-nk-05Y"/>
+                            <constraint firstItem="ZB4-Wk-n5j" firstAttribute="top" secondItem="wPL-vA-0D8" secondAttribute="bottom" constant="8" id="bvT-be-TCl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -83,16 +87,16 @@
                                 <exclude reference="P4k-K8-Q4f"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="AFn-7i-pS5"/>
                                 <exclude reference="1A2-aP-iZT"/>
-                                <exclude reference="x1p-nk-05Y"/>
-                                <exclude reference="gWg-FU-Aqm"/>
+                                <exclude reference="3fI-A0-GWm"/>
                                 <exclude reference="Obe-Q0-gep"/>
+                                <exclude reference="PGW-cX-Oka"/>
                                 <exclude reference="TmD-zX-9qy"/>
                                 <exclude reference="V1J-BI-WQk"/>
                                 <exclude reference="aqC-FG-Vkz"/>
-                                <exclude reference="eXb-St-9dT"/>
-                                <exclude reference="pkU-dA-9fd"/>
+                                <exclude reference="1b0-SL-a9j"/>
+                                <exclude reference="bvT-be-TCl"/>
+                                <exclude reference="AFn-7i-pS5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -102,27 +106,29 @@
                                 <include reference="P4k-K8-Q4f"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="AFn-7i-pS5"/>
                                 <include reference="1A2-aP-iZT"/>
-                                <include reference="x1p-nk-05Y"/>
-                                <include reference="gWg-FU-Aqm"/>
+                                <include reference="3fI-A0-GWm"/>
                                 <exclude reference="Obe-Q0-gep"/>
+                                <include reference="PGW-cX-Oka"/>
                                 <include reference="TmD-zX-9qy"/>
                                 <include reference="V1J-BI-WQk"/>
                                 <exclude reference="aqC-FG-Vkz"/>
-                                <include reference="eXb-St-9dT"/>
-                                <include reference="pkU-dA-9fd"/>
+                                <include reference="1b0-SL-a9j"/>
+                                <include reference="bvT-be-TCl"/>
+                                <exclude reference="AFn-7i-pS5"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Now Playing" image="play.png" id="Jnd-96-m7z"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="player" destination="ZB4-Wk-n5j" id="mO1-Jp-wNI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iib-jP-E1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285.5" y="459"/>
+            <point key="canvasLocation" x="856.5" y="1113"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uCt-Lg-m0K">
@@ -141,7 +147,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2J-Nf-jnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367.5" y="459"/>
+            <point key="canvasLocation" x="142.5" y="461"/>
         </scene>
         <!--Now Playing View Controller-->
         <scene sceneID="Hnp-Lm-V1s">
@@ -289,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80n-I9-0BX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981.5" y="110.5"/>
+            <point key="canvasLocation" x="2053.5" y="536.5"/>
         </scene>
         <!--About the Spy-->
         <scene sceneID="4xk-Ez-P9T">
@@ -384,7 +390,7 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60H-Ce-9Mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098.5" y="547"/>
+            <point key="canvasLocation" x="940.5" y="57"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class NowPlayingViewController: UIViewController {
     
@@ -54,7 +55,12 @@ class NowPlayingViewController: UIViewController {
         
         let currentTrack: String = String(infoArray![19] as NSString)
         
+        let mediaPlayer: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.defaultCenter()
         
+        if (currentTrack != "") {
+            var songInfo: NSMutableDictionary = [MPMediaItemPropertyTitle : currentTrack, MPMediaItemPropertyArtist : currentArtist, MPMediaItemPropertyAlbumTitle : "The Spy"]
+            mediaPlayer.nowPlayingInfo = songInfo
+        }
         artist.text = currentArtist
         track.text = currentTrack
     }

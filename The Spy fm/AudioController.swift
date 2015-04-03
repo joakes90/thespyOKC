@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AudioController: UIViewController {
 
@@ -22,6 +23,10 @@ class AudioController: UIViewController {
         player.scrollView.scrollEnabled = false
         player.scrollView.bounces = false
         player.loadRequest(urlRequest)
+        
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        audioSession.setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        audioSession.setActive(true, error: nil)
     }
 
     override func didReceiveMemoryWarning() {
