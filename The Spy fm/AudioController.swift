@@ -16,7 +16,7 @@ class AudioController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contentUrl: NSURL = NSURL(string: "http://justinoak.es/spyfm/audiotest.html")!
+        let contentUrl: NSURL = NSURL(string: "http://oklasoftware.com/thespy/audiotest.html")!
         let urlRequest: NSURLRequest = NSURLRequest(URL: contentUrl)
         player.allowsInlineMediaPlayback = true
         player.mediaPlaybackRequiresUserAction = false
