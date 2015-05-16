@@ -12,6 +12,7 @@ import MediaPlayer
 class NowPlayingViewController: UIViewController {
     
     let songURL = NSURL(string: "http://www.thespyfm.com/media/template.html")
+    var showAlert: Bool = true
     
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var track: UILabel!
@@ -45,24 +46,32 @@ class NowPlayingViewController: UIViewController {
         
         
         for i in elementsToStrip{
-            pageContent = pageContent?.stringByReplacingOccurrencesOfString(i, withString: "\n")
+            pageContent = pageContent?.stringByReplacingOccurrencesOfString(i as String, withString: "\n")
         }
         pageContent = pageContent?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         
         let infoArray = pageContent?.componentsSeparatedByString("\n")
+        if infoArray == nil {
+            if showAlert == true{
+                let alert: UIAlertView = UIAlertView(title: "No Network Connection", message: "The Spy FM is currently not available. Please try again later", delegate: self, cancelButtonTitle: "Ok")
+                alert.show()
+                showAlert = false
+            }
+        }else {
         
-        let currentArtist: String = String(infoArray![0] as NSString)
+        let currentArtist: String = String(infoArray![0] as! NSString)
         
-        let currentTrack: String = String(infoArray![19] as NSString)
+        let currentTrack: String = String(infoArray![19] as! NSString)
         
         let mediaPlayer: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.defaultCenter()
         
         if (currentTrack != "") {
             var songInfo: NSMutableDictionary = [MPMediaItemPropertyTitle : currentTrack, MPMediaItemPropertyArtist : currentArtist, MPMediaItemPropertyAlbumTitle : "The Spy"]
-            mediaPlayer.nowPlayingInfo = songInfo
+            mediaPlayer.nowPlayingInfo = songInfo as [NSObject : AnyObject]
         }
-        artist.text = currentArtist
-        track.text = currentTrack
+        artist.text = "By \(currentArtist)"
+        track.text = "Now Playing: \(currentTrack)"
+    }
     }
 
     /*
