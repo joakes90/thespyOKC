@@ -8,8 +8,12 @@
 
 import UIKit
 import MediaPlayer
+import AVFoundation
 
 class NowPlayingViewController: UIViewController {
+    
+    
+    @IBOutlet var player: UIWebView!
     
     let songURL = NSURL(string: "http://www.thespyfm.com/media/template.html")
     var showAlert: Bool = true
@@ -20,8 +24,23 @@ class NowPlayingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        super.viewDidLoad()
+        let contentUrl: NSURL = NSURL(string: "https://oklasoftware.com/thespy/audiotest.html")!
+        let urlRequest: NSURLRequest = NSURLRequest(URL: contentUrl)
+        player.allowsInlineMediaPlayback = true
+        player.mediaPlaybackRequiresUserAction = false
+        player.scrollView.scrollEnabled = false
+        player.scrollView.bounces = false
+        player.loadRequest(urlRequest)
+        
+        let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
+        audioSession.setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        audioSession.setActive(true, error: nil)
         getSongInfo()
+        
         let timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "getSongInfo", userInfo: nil, repeats: true)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,25 +82,27 @@ class NowPlayingViewController: UIViewController {
         
         let currentTrack: String = String(infoArray![19] as! NSString)
         
+        let album: NSString = "The Spy" as NSString
+        
         let mediaPlayer: MPNowPlayingInfoCenter = MPNowPlayingInfoCenter.defaultCenter()
         
         if (currentTrack != "") {
-            var songInfo: NSMutableDictionary = [MPMediaItemPropertyTitle : currentTrack, MPMediaItemPropertyArtist : currentArtist, MPMediaItemPropertyAlbumTitle : "The Spy"]
+            var rate: Float?
+            if (self.player.request?.URL?.absoluteString == "https://oklasoftware.com/thespy/playing.html" && mediaPlayer.nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] as! Float == 1.0) {
+                rate = 1.0
+            } else {
+                rate = 0.0
+                self.player.loadRequest(NSURLRequest(URL: NSURL(string: "https://oklasoftware.com/thespy/audiotest.html")!))
+            }
+        
+            var songInfo = [MPMediaItemPropertyTitle : currentTrack, MPMediaItemPropertyArtist : currentArtist, MPMediaItemPropertyAlbumTitle : album, MPNowPlayingInfoPropertyPlaybackRate: rate!]
             mediaPlayer.nowPlayingInfo = songInfo as [NSObject : AnyObject]
-        }
-        artist.text = "By \(currentArtist)"
+            }
+        artist.text = "By: \(currentArtist)"
         track.text = "Now Playing: \(currentTrack)"
     }
-    }
 
-    /*
-    // MARK: - Navigation
+ }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

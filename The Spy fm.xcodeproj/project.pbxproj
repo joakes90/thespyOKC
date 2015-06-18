@@ -21,7 +21,6 @@
 		D0B5E9DA1A2E4F96002EF95F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B5E9D91A2E4F96002EF95F /* Images.xcassets */; };
 		D0B5E9DD1A2E4F96002EF95F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B5E9DB1A2E4F96002EF95F /* LaunchScreen.xib */; };
 		D0B5E9E91A2E4F96002EF95F /* The_Spy_fmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5E9E81A2E4F96002EF95F /* The_Spy_fmTests.swift */; };
-		D0B5E9F71A2E5415002EF95F /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5E9F61A2E5415002EF95F /* AudioController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		D0B5E9E21A2E4F96002EF95F /* The Spy fmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Spy fmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B5E9E71A2E4F96002EF95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B5E9E81A2E4F96002EF95F /* The_Spy_fmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Spy_fmTests.swift; sourceTree = "<group>"; };
-		D0B5E9F61A2E5415002EF95F /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				D0B5E9D21A2E4F96002EF95F /* AppDelegate.swift */,
-				D0B5E9F61A2E5415002EF95F /* AudioController.swift */,
 				D00AC97B1A33D89E005FB7E0 /* NowPlayingViewController.swift */,
 				D0B5E9D61A2E4F96002EF95F /* Main.storyboard */,
 				D0B5E9D91A2E4F96002EF95F /* Images.xcassets */,
@@ -326,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B5E9F71A2E5415002EF95F /* AudioController.swift in Sources */,
 				D00AC97C1A33D89E005FB7E0 /* NowPlayingViewController.swift in Sources */,
 				D0B5E9D31A2E4F96002EF95F /* AppDelegate.swift in Sources */,
 			);
