@@ -24,7 +24,8 @@ class NowPlayingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "togglePause", name: "pauseplay", object: nil)
+        
         let contentUrl: NSURL = NSURL(string: "https://oklasoftware.com/thespy/audiotest.html")!
         let urlRequest: NSURLRequest = NSURLRequest(URL: contentUrl)
         player.allowsInlineMediaPlayback = true
@@ -41,6 +42,10 @@ class NowPlayingViewController: UIViewController {
         let timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "getSongInfo", userInfo: nil, repeats: true)
         
         
+    }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +108,12 @@ class NowPlayingViewController: UIViewController {
     }
 
  }
-
+    func togglePause() {
+        if self.player.request?.URL?.absoluteString == "https://oklasoftware.com/thespy/playing.html" {
+            self.player.loadRequest(NSURLRequest(URL: NSURL(string: "https://oklasoftware.com/thespy/audiotest.html")!))
+        } else {
+            self.player.loadRequest(NSURLRequest(URL: NSURL(string: "https://oklasoftware.com/thespy/playing.html")!))
+        }
+    }
 
 }

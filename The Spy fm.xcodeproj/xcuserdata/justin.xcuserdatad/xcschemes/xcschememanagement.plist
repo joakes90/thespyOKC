@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - The Spy fm WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Notification - The Spy fm WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>The Spy fm WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>The Spy fm.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>D0B5E9E11A2E4F96002EF95F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0FD447C1B3DC4BE008AFAC4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0FD44A01B3DC518008AFAC4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
