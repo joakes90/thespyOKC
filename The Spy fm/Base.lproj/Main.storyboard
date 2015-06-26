@@ -5,6 +5,11 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Stfranci.ttf">
+            <string>StFrancis-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Now Playing-->
         <scene sceneID="qmn-cc-85b">
@@ -207,9 +212,11 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jdt-VH-H9i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Qcm-9b-qQf">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="Qcm-9b-qQf">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.60392156862745094" green="0.050980392156862744" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.60392156862745094" green="0.050980392156862744" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="CBU-ll-naY" kind="relationship" relationship="viewControllers" id="AHD-lu-2Lw"/>
@@ -319,23 +326,109 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
         <!--Twitter-->
         <scene sceneID="LKO-3m-cAt">
             <objects>
-                <viewController id="mii-uU-ZiS" sceneMemberID="viewController">
+                <viewController id="mii-uU-ZiS" customClass="TableViewController" customModule="The_Spy_fm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WaS-1C-qjo"/>
                         <viewControllerLayoutGuide type="bottom" id="sRJ-mY-l0E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lnp-GS-bEK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFo-sN-oHv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="StFrancis-Regular" family="StFrancis" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.39142382652170726" blue="0.044128175754086896" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DsR-X5-OrW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DsR-X5-OrW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="95" id="5Bf-a1-0xq" customClass="TwitterCellTableViewCell" customModule="The_Spy_fm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Bf-a1-0xq" id="uO6-oi-9V5">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHE-76-PR7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" red="0.49761904761904763" green="0.49523809523809526" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <color key="textColor" red="1" green="0.31348858845042948" blue="0.059805103403749116" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweet3x" translatesAutoresizingMaskIntoConstraints="NO" id="AmQ-iL-2de">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="RaS-Gd-dIg"/>
+                                                        <constraint firstAttribute="height" constant="42" id="az4-Uh-7Jd"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="RaS-Gd-dIg"/>
+                                                            <exclude reference="az4-Uh-7Jd"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="RaS-Gd-dIg"/>
+                                                            <include reference="az4-Uh-7Jd"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.50248242005135391" green="0.50007819794584507" blue="0.50488664215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wHE-76-PR7" secondAttribute="trailing" constant="-8" id="5Wr-63-G8U"/>
+                                                <constraint firstItem="wHE-76-PR7" firstAttribute="top" secondItem="uO6-oi-9V5" secondAttribute="topMargin" constant="-8" id="7vf-Et-jdY"/>
+                                                <constraint firstItem="AmQ-iL-2de" firstAttribute="top" secondItem="uO6-oi-9V5" secondAttribute="topMargin" constant="19" id="EMj-H4-hFE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wHE-76-PR7" secondAttribute="bottom" constant="-8" id="VBq-RI-EmK"/>
+                                                <constraint firstItem="AmQ-iL-2de" firstAttribute="leading" secondItem="uO6-oi-9V5" secondAttribute="leadingMargin" id="bfI-tl-pFi"/>
+                                                <constraint firstItem="wHE-76-PR7" firstAttribute="leading" secondItem="uO6-oi-9V5" secondAttribute="leadingMargin" constant="-8" id="yv9-gH-OdV">
+                                                    <variation key="widthClass=compact" constant="50"/>
+                                                </constraint>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="wHE-76-PR7"/>
+                                                    <exclude reference="AmQ-iL-2de"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="EMj-H4-hFE"/>
+                                                    <exclude reference="bfI-tl-pFi"/>
+                                                    <exclude reference="5Wr-63-G8U"/>
+                                                    <exclude reference="7vf-Et-jdY"/>
+                                                    <exclude reference="VBq-RI-EmK"/>
+                                                    <exclude reference="yv9-gH-OdV"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="wHE-76-PR7"/>
+                                                    <include reference="AmQ-iL-2de"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="EMj-H4-hFE"/>
+                                                    <include reference="bfI-tl-pFi"/>
+                                                    <include reference="5Wr-63-G8U"/>
+                                                    <include reference="7vf-Et-jdY"/>
+                                                    <include reference="VBq-RI-EmK"/>
+                                                    <include reference="yv9-gH-OdV"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="wHE-76-PR7" id="Zuk-6m-KVs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mii-uU-ZiS" id="flZ-n2-niA"/>
+                                    <outlet property="delegate" destination="mii-uU-ZiS" id="QcU-av-wJr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.12549019607843137" green="0.13725490196078433" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
@@ -353,12 +446,12 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
                                 <exclude reference="DsR-X5-OrW"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="bi5-fU-Xjz"/>
-                                <exclude reference="ujY-DU-KVn"/>
-                                <exclude reference="wL6-Fz-IDI"/>
                                 <exclude reference="dkC-3T-AuC"/>
                                 <exclude reference="zLL-Ve-sqW"/>
                                 <exclude reference="LM4-3u-8Sg"/>
+                                <exclude reference="bi5-fU-Xjz"/>
+                                <exclude reference="ujY-DU-KVn"/>
+                                <exclude reference="wL6-Fz-IDI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -367,16 +460,19 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
                                 <include reference="DsR-X5-OrW"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bi5-fU-Xjz"/>
-                                <include reference="ujY-DU-KVn"/>
-                                <include reference="wL6-Fz-IDI"/>
                                 <include reference="dkC-3T-AuC"/>
                                 <include reference="zLL-Ve-sqW"/>
                                 <include reference="LM4-3u-8Sg"/>
+                                <include reference="bi5-fU-Xjz"/>
+                                <include reference="ujY-DU-KVn"/>
+                                <include reference="wL6-Fz-IDI"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Twitter" id="mIF-2Z-opM"/>
+                    <tabBarItem key="tabBarItem" title="Twitter" image="tweet3x" id="mIF-2Z-opM"/>
+                    <connections>
+                        <outlet property="tabelView" destination="DsR-X5-OrW" id="jY8-Cu-Lhx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgd-qJ-J1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,5 +483,6 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
         <image name="about.png" width="20" height="20"/>
         <image name="play.png" width="15" height="15"/>
         <image name="thespypurple.png" width="161" height="67"/>
+        <image name="tweet3x" width="22" height="22"/>
     </resources>
 </document>
