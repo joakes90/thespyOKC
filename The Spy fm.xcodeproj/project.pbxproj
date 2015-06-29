@@ -910,6 +910,7 @@
 				D0FD44B21B3DC518008AFAC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0FD44B31B3DC518008AFAC4 /* Build configuration list for PBXNativeTarget "The Spy fm WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -918,6 +919,7 @@
 				D0FD44B51B3DC518008AFAC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
