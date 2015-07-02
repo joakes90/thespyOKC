@@ -10,7 +10,7 @@
 		D00AC97C1A33D89E005FB7E0 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AC97B1A33D89E005FB7E0 /* NowPlayingViewController.swift */; };
 		D00AC97E1A3412AD005FB7E0 /* thespypurple.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC97D1A3412AD005FB7E0 /* thespypurple.png */; };
 		D00AC9801A34136E005FB7E0 /* thespygreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC97F1A34136E005FB7E0 /* thespygreen.png */; };
-		D00AC98A1A34335D005FB7E0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC9891A34335D005FB7E0 /* play.png */; };
+		D00AC98A1A34335D005FB7E0 /* playicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC9891A34335D005FB7E0 /* playicon.png */; };
 		D00AC98E1A3433BD005FB7E0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC98D1A3433BD005FB7E0 /* about.png */; };
 		D027A00A1B346FD40034A40F /* Stfranci.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D027A0091B346F5B0034A40F /* Stfranci.ttf */; };
 		D03501931AC94FB100E6BD86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03501921AC94FB100E6BD86 /* AVFoundation.framework */; };
@@ -78,7 +78,7 @@
 		D00AC97B1A33D89E005FB7E0 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		D00AC97D1A3412AD005FB7E0 /* thespypurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thespypurple.png; sourceTree = "<group>"; };
 		D00AC97F1A34136E005FB7E0 /* thespygreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thespygreen.png; sourceTree = "<group>"; };
-		D00AC9891A34335D005FB7E0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		D00AC9891A34335D005FB7E0 /* playicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playicon.png; sourceTree = "<group>"; };
 		D00AC98D1A3433BD005FB7E0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		D027A0091B346F5B0034A40F /* Stfranci.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stfranci.ttf; sourceTree = "<group>"; };
 		D03501921AC94FB100E6BD86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -207,7 +207,7 @@
 			children = (
 				D027A0091B346F5B0034A40F /* Stfranci.ttf */,
 				D00AC98D1A3433BD005FB7E0 /* about.png */,
-				D00AC9891A34335D005FB7E0 /* play.png */,
+				D00AC9891A34335D005FB7E0 /* playicon.png */,
 				D00AC97F1A34136E005FB7E0 /* thespygreen.png */,
 				D00AC97D1A3412AD005FB7E0 /* thespypurple.png */,
 				D0B5E9D11A2E4F96002EF95F /* Info.plist */,
@@ -434,7 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D027A00A1B346FD40034A40F /* Stfranci.ttf in Resources */,
-				D00AC98A1A34335D005FB7E0 /* play.png in Resources */,
+				D00AC98A1A34335D005FB7E0 /* playicon.png in Resources */,
 				D00AC97E1A3412AD005FB7E0 /* thespypurple.png in Resources */,
 				D00AC9801A34136E005FB7E0 /* thespygreen.png in Resources */,
 				D0B5E9D81A2E4F96002EF95F /* Main.storyboard in Resources */,
