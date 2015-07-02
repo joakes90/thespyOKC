@@ -168,6 +168,8 @@
                                 <exclude reference="qRE-dx-uy5"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="X4N-ag-Odn"/>
+                                <exclude reference="tZX-sb-wIK"/>
                                 <exclude reference="1A2-aP-iZT"/>
                                 <exclude reference="3fI-A0-GWm"/>
                                 <exclude reference="47Z-7t-AHx"/>
@@ -175,8 +177,6 @@
                                 <exclude reference="84O-Qa-7T4"/>
                                 <exclude reference="p8P-5y-Bfu"/>
                                 <exclude reference="xpp-Am-K9p"/>
-                                <exclude reference="X4N-ag-Odn"/>
-                                <exclude reference="tZX-sb-wIK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
