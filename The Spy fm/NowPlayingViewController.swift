@@ -128,6 +128,7 @@ class NowPlayingViewController: UIViewController {
             playing = false
             self.getSongInfo()
         } else{
+            audioPlayer = AVPlayer(URL: NSURL(string: "http://50.7.70.58:8691/live")!)
             audioPlayer?.play()
             playing = true
             self.pausePlayButton.setImage(UIImage(named: "pause"), forState: UIControlState.Normal)
