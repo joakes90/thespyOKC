@@ -46,8 +46,6 @@ class TrackInfoController: NSObject {
         
         let currentTrack: String = String(infoArray![19] as NSString)
         
-        let album: NSString = "The Spy" as NSString
-        
         return "\(currentTrack) By: \(currentArtist)"
         
     }
