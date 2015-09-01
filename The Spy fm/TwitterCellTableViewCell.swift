@@ -10,7 +10,8 @@ import UIKit
 
 class TwitterCellTableViewCell: UITableViewCell {
 
-    @IBOutlet var textView: UITextView!
+    
+    @IBOutlet var label: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +20,9 @@ class TwitterCellTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
 
-        // Configure the view for the selected state
+
     }
 
 }

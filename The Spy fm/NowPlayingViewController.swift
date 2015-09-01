@@ -41,7 +41,10 @@ class NowPlayingViewController: UIViewController {
         
         let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
         
-        audioSession.setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        do {
+            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
 
         self.getSongInfo()
         
@@ -74,7 +77,11 @@ class NowPlayingViewController: UIViewController {
         
         var pageContent: NSString?
 
-        pageContent =  NSString(contentsOfURL: songURL!, encoding: NSUTF8StringEncoding, error: nil)
+        do {
+            pageContent =  try NSString(contentsOfURL: songURL!, encoding: NSUTF8StringEncoding)
+        } catch _ {
+            pageContent = nil
+        }
         
         
         for i in elementsToStrip{
@@ -100,9 +107,9 @@ class NowPlayingViewController: UIViewController {
             }
         }else {
             
-            let currentArtist: String = String(infoArray![0] as! NSString)
+            let currentArtist: String = String(infoArray![0] as NSString)
             
-            let currentTrack: String = String(infoArray![19] as! NSString)
+            let currentTrack: String = String(infoArray![19] as NSString)
             
             let album: NSString = "The Spy" as NSString
             

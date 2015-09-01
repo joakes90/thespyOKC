@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController, UITableViewDataSource {
+class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tabelView: UITableView!
     
@@ -43,9 +43,9 @@ class TableViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: TwitterCellTableViewCell = self.tabelView.dequeueReusableCellWithIdentifier("cell") as! TwitterCellTableViewCell
+        let cell = self.tabelView.dequeueReusableCellWithIdentifier("cell")! as! TwitterCellTableViewCell
         
-        cell.textView.text = TwitterController.sharedInstance.tweets![indexPath.row]["text"] as! String
+        cell.label.text = (TwitterController.sharedInstance.tweets![indexPath.row]["text"]! as! String)
         
         return cell
     }

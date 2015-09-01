@@ -37,10 +37,14 @@ class TwitterController: NSObject {
                     posts.account = twitterAccount
                     
                     posts.performRequestWithHandler({ (data, responce, error) -> Void in
-                        if (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableLeaves, error: nil) != nil){
-                            self.tweets = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableLeaves, error: nil) as! [NSDictionary]!
+                            do {
+                                self.tweets = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableLeaves) as? [NSDictionary]
+                            } catch {
+                                print(error)
+                            }
                             
-                        }
+                            
+                        
                         if self.tweets != nil {
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 NSNotificationCenter.defaultCenter().postNotificationName("newTweets", object: nil)

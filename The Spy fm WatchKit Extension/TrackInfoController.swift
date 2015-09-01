@@ -26,7 +26,12 @@ class TrackInfoController: NSObject {
             "<h3>Just<br>Missed</h3>",
             "\n", "\r", "\t"]
         
-        var pageContent = NSString(contentsOfURL: songURL!, encoding: NSUTF8StringEncoding, error: nil)
+        var pageContent: NSString?
+        do {
+            pageContent = try NSString(contentsOfURL: songURL!, encoding: NSUTF8StringEncoding)
+        } catch _ {
+            pageContent = nil
+        }
         
         
         for i in elementsToStrip{
@@ -37,9 +42,9 @@ class TrackInfoController: NSObject {
         let infoArray = pageContent?.componentsSeparatedByString("\n")
         
         
-        let currentArtist: String = String(infoArray![0] as! NSString)
+        let currentArtist: String = String(infoArray![0] as NSString)
         
-        let currentTrack: String = String(infoArray![19] as! NSString)
+        let currentTrack: String = String(infoArray![19] as NSString)
         
         let album: NSString = "The Spy" as NSString
         

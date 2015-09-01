@@ -33,6 +33,8 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func pausePlay() {
+       
+        
         WKInterfaceController.openParentApplication(["pause/play" : true], reply: { (reply, error) -> Void in
 
         })
