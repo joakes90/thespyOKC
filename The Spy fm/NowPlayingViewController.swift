@@ -16,10 +16,12 @@ class NowPlayingViewController: UIViewController {
     let songURL = NSURL(string: "http://www.thespyfm.com/media/template.html")
     var showAlert: Bool = true
     
+    @IBOutlet var artImage: UIImageView!
     @IBOutlet var pausePlayButton: UIButton!
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var track: UILabel!
     let Commandcenter: MPRemoteCommandCenter = MPRemoteCommandCenter.sharedCommandCenter()
+    let artFinder: AlbumArtFinder = AlbumArtFinder()
     
     var audioPlayer: AVPlayer?
     
@@ -27,6 +29,10 @@ class NowPlayingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UIScreen.mainScreen().bounds.size.height <= 480 {
+            self.artImage.hidden = true
+        }
         
         Commandcenter.playCommand.addTarget(self, action: "toggle:")
         Commandcenter.pauseCommand.addTarget(self, action: "toggle:")
@@ -37,7 +43,7 @@ class NowPlayingViewController: UIViewController {
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "toggle:", name: "pauseplay", object: nil)
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateImage", name: "imageChange", object: nil)
         
         let audioSession: AVAudioSession = AVAudioSession.sharedInstance()
         
@@ -123,10 +129,21 @@ class NowPlayingViewController: UIViewController {
             }
             artist.text = "By: \(currentArtist)"
             track.text = "Now Playing: \(currentTrack)"
+            
+            self.getSongArt(currentTrack, artist: currentArtist)
         }
         
     }
     
+    func getSongArt(song: NSString, artist: NSString) {
+        if !self.artImage.hidden {
+            self.artFinder.getAlbumArtFor(song, artist: artist)
+        }
+    }
+    
+    func updateImage() {
+        self.artImage.image = self.artFinder.image
+    }
     
     @IBAction func toggle(sender: AnyObject) {
         if playing {

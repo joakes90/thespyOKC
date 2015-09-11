@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jdt-VH-H9i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jdt-VH-H9i">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -50,11 +51,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">About The Spy
+                                <string key="text">About The Spy
 
 The SPY is and has been an Oklahoma ICON since the 1970′s. Loosely defined as Modern Rock, it draws many labels such as “College”, “Indie”, and “Alternative” but is so much more. With an emphasis on specialty shows, The SPY widens its audience by attracting audiophiles who are curious about discovering obscure gems in classic alternative, punk, post-punk, new wave, rockabilly, blues, country, garage, dance, goth, reggae, dub, ska, roots, and the literal lifeblood of The SPY… the LOCAL ARTISTS! Plus other musical styles that defy categorization.
 
-The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our mission is simple: To offer a unique, branded formula of music, original shows, ideas, community, &amp; EDUCATION to HELP further the LOCAL CULTURE in a format that appeals to listeners turned off by the current stagnant radio spectrum. Also, The SPY introduces our LOYAL LISTENERSHIP to the HIP local businesses in the metro by offering them an avenue of information on these businesses which is sorely UNDERREPRESENTED on the Oklahoma RADIO dial. Oklahoma City’s thriving music culture is also ready for a voice to help nuture the scene, and The SPY is going to give them that voice.</mutableString>
+The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our mission is simple: To offer a unique, branded formula of music, original shows, ideas, community, &amp; EDUCATION to HELP further the LOCAL CULTURE in a format that appeals to listeners turned off by the current stagnant radio spectrum. Also, The SPY introduces our LOYAL LISTENERSHIP to the HIP local businesses in the metro by offering them an avenue of information on these businesses which is sorely UNDERREPRESENTED on the Oklahoma RADIO dial. Oklahoma City’s thriving music culture is also ready for a voice to help nuture the scene, and The SPY is going to give them that voice.</string>
                                 <color key="textColor" red="0.76470588240000004" green="0.94117647059999998" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -90,6 +91,10 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thespypurple.png" translatesAutoresizingMaskIntoConstraints="NO" id="X2j-gQ-hAu">
                                 <rect key="frame" x="220" y="28" width="161" height="67"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="1pf-6j-6QH"/>
+                                    <constraint firstAttribute="height" constant="67" id="mQW-ei-s5n"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60M-M8-d3L">
                                 <rect key="frame" x="20" y="153" width="560" height="47"/>
@@ -101,9 +106,12 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpu-fo-mgB">
-                                <rect key="frame" x="61" y="208" width="519" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpu-fo-mgB">
+                                <rect key="frame" x="61" y="208" width="519" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ENU-or-WEf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -120,24 +128,41 @@ The SPY is the only LOCAL, independently OWNED and OPERATED radio station, our m
                                     <action selector="toggle:" destination="2Fw-fb-SvI" eventType="touchUpInside" id="asJ-G1-lVV"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="39y-bn-0Jh">
+                                <rect key="frame" x="234" y="260" width="132" height="132"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="39y-bn-0Jh" secondAttribute="height" multiplier="1:1" id="0e9-LJ-oeb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jpu-fo-mgB" firstAttribute="leading" secondItem="wzD-cB-F5I" secondAttribute="leadingMargin" constant="41" id="7H8-9I-k39"/>
                             <constraint firstAttribute="leadingMargin" secondItem="60M-M8-d3L" secondAttribute="leading" id="Ceq-OU-C21"/>
+                            <constraint firstItem="39y-bn-0Jh" firstAttribute="width" secondItem="wzD-cB-F5I" secondAttribute="height" multiplier="1:1" id="K1g-Rq-75x"/>
                             <constraint firstItem="Ax2-b1-2ya" firstAttribute="centerX" secondItem="wzD-cB-F5I" secondAttribute="centerX" id="K4N-gF-aqL"/>
                             <constraint firstItem="X2j-gQ-hAu" firstAttribute="top" secondItem="arp-vP-LY9" secondAttribute="bottom" constant="8" id="PB4-Cx-Hw6"/>
+                            <constraint firstItem="39y-bn-0Jh" firstAttribute="top" secondItem="jpu-fo-mgB" secondAttribute="bottom" constant="8" id="ShT-Cm-s3h"/>
                             <constraint firstItem="6Tt-S5-amV" firstAttribute="top" secondItem="Ax2-b1-2ya" secondAttribute="bottom" constant="78" id="Wfd-dr-3cA"/>
                             <constraint firstItem="X2j-gQ-hAu" firstAttribute="centerX" secondItem="wzD-cB-F5I" secondAttribute="centerX" id="bFv-16-q3e"/>
+                            <constraint firstItem="60M-M8-d3L" firstAttribute="top" secondItem="X2j-gQ-hAu" secondAttribute="bottom" constant="58" id="bRa-h5-lsj"/>
+                            <constraint firstItem="Ax2-b1-2ya" firstAttribute="top" secondItem="39y-bn-0Jh" secondAttribute="bottom" constant="8" id="dr3-F4-Ymg"/>
                             <constraint firstItem="jpu-fo-mgB" firstAttribute="top" secondItem="60M-M8-d3L" secondAttribute="bottom" constant="8" symbolic="YES" id="fdi-ke-8aC"/>
-                            <constraint firstItem="60M-M8-d3L" firstAttribute="top" secondItem="X2j-gQ-hAu" secondAttribute="bottom" constant="58" id="gqp-3o-9sB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jpu-fo-mgB" secondAttribute="trailing" id="rjK-aM-egf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="60M-M8-d3L" secondAttribute="trailing" id="uRn-BF-A5l"/>
+                            <constraint firstItem="39y-bn-0Jh" firstAttribute="centerX" secondItem="wzD-cB-F5I" secondAttribute="centerX" id="xKR-kH-f0j"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="K1g-Rq-75x"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Now Playing" image="playicon" id="7ys-kG-zmQ"/>
                     <connections>
+                        <outlet property="artImage" destination="39y-bn-0Jh" id="pYw-kH-WOd"/>
                         <outlet property="artist" destination="jpu-fo-mgB" id="mkC-YR-1fc"/>
                         <outlet property="pausePlayButton" destination="Ax2-b1-2ya" id="cSK-yg-N1g"/>
                         <outlet property="track" destination="60M-M8-d3L" id="PJO-Fn-El7"/>

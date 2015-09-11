@@ -12,6 +12,7 @@
 		D00AC9801A34136E005FB7E0 /* thespygreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC97F1A34136E005FB7E0 /* thespygreen.png */; };
 		D00AC98A1A34335D005FB7E0 /* playicon.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC9891A34335D005FB7E0 /* playicon.png */; };
 		D00AC98E1A3433BD005FB7E0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = D00AC98D1A3433BD005FB7E0 /* about.png */; };
+		D014D7CF1BA25B6E00AEE25C /* AlbumArtFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D014D7CE1BA25B6E00AEE25C /* AlbumArtFinder.swift */; settings = {ASSET_TAGS = (); }; };
 		D027A00A1B346FD40034A40F /* Stfranci.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D027A0091B346F5B0034A40F /* Stfranci.ttf */; };
 		D03501931AC94FB100E6BD86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03501921AC94FB100E6BD86 /* AVFoundation.framework */; };
 		D04AA0761ACF3F9500BC39B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04AA0751ACF3F9500BC39B7 /* MediaPlayer.framework */; };
@@ -80,6 +81,7 @@
 		D00AC97F1A34136E005FB7E0 /* thespygreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thespygreen.png; sourceTree = "<group>"; };
 		D00AC9891A34335D005FB7E0 /* playicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playicon.png; sourceTree = "<group>"; };
 		D00AC98D1A3433BD005FB7E0 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		D014D7CE1BA25B6E00AEE25C /* AlbumArtFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumArtFinder.swift; sourceTree = "<group>"; };
 		D027A0091B346F5B0034A40F /* Stfranci.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stfranci.ttf; sourceTree = "<group>"; };
 		D03501921AC94FB100E6BD86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D04AA0751ACF3F9500BC39B7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -189,6 +191,7 @@
 		D0B5E9CF1A2E4F96002EF95F /* The Spy fm */ = {
 			isa = PBXGroup;
 			children = (
+				D014D7CE1BA25B6E00AEE25C /* AlbumArtFinder.swift */,
 				D0C457861B337460003FB961 /* TableViewController.swift */,
 				D0B5E9D21A2E4F96002EF95F /* AppDelegate.swift */,
 				D00AC97B1A33D89E005FB7E0 /* NowPlayingViewController.swift */,
@@ -502,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00AC97C1A33D89E005FB7E0 /* NowPlayingViewController.swift in Sources */,
+				D014D7CF1BA25B6E00AEE25C /* AlbumArtFinder.swift in Sources */,
 				D0B5E9D31A2E4F96002EF95F /* AppDelegate.swift in Sources */,
 				D0C4577D1B336FB5003FB961 /* TwitterController.swift in Sources */,
 				D0C457871B337460003FB961 /* TableViewController.swift in Sources */,
