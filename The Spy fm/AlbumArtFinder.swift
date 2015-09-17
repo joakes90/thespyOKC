@@ -32,8 +32,10 @@ class AlbumArtFinder: NSObject {
                 let songArray: NSArray = songs?.objectForKey("results") as! NSArray
                 if songArray.count > 0 {
                     let songDictionary: NSDictionary = songArray[0] as! NSDictionary
+                    var songURL: String = songDictionary["artworkUrl100"] as! String
+                    songURL = songURL.stringByReplacingOccurrencesOfString("100x100", withString: "600x600")
                     
-                    let songImageData: NSData = NSData(contentsOfURL: NSURL(string: songDictionary["artworkUrl100"] as! String)!)!
+                    let songImageData: NSData = NSData(contentsOfURL: NSURL(string: songURL)!)!
                     let songImage: UIImage = UIImage(data: songImageData)!
 
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
